@@ -21,7 +21,16 @@ ros2 launch hik_camera hik_camera.launch.py
 
 ### 运行标定程序
 ```
-ros2 run camera_calibration cameracalibrator --size 8x11 --square 0.015 --ros-args -r image:=/image_raw
+ros2 run camera_calibration cameracalibrator --size 7x10 --square 0.015 --ros-args -r image:=/image_raw
 ```
+注意：`--size`参数为棋盘格的小方格交点，`--square`参数为标定板每个方块的边长
+如果你的棋盘格是 8x11 的（即棋盘格上有 7 行和 10 列的小方格交点），则 --size 参数应设置为 7x10。
+
 <img src="doc/calibration.png" width="50%" height="auto" />
 
+```
+x：表示标定板在视野中的左右位置。
+y：表示标定板在视野中的上下位置。
+size：标定板在占视野的尺寸大小，也可以理解为标定板离摄像头的远近。
+skew：标定板在视野中的倾斜位置。
+```
