@@ -17,11 +17,11 @@ ros2 launch hik_camera hik_camera.launch.py
 ### 3、下载标定板
 `https://calib.io/zh/pages/camera-calibration-pattern-generator`
 
-<img src="doc/pattern.png" width="30%" height="auto" />
+<img src="doc/pattern.png" width="50%" height="auto" />
 
 ### 运行标定程序
 ```
 ros2 run camera_calibration cameracalibrator --size 8x11 --square 0.015 --ros-args -r image:=/image_raw
 ```
-<img src="doc/calibration.png" width="30%" height="auto" />
+<img src="doc/calibration.png" width="50%" height="auto" />
 
