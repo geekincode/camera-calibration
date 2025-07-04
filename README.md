@@ -19,7 +19,7 @@ ros2 launch hik_camera hik_camera.launch.py
 
 <img src="doc/pattern.png" width="50%" height="auto" />
 
-### 运行标定程序
+### 4、运行标定程序
 ```
 ros2 run camera_calibration cameracalibrator --size 7x10 --square 0.015 --ros-args -r image:=/image_raw
 ```
