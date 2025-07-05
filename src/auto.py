@@ -6,7 +6,6 @@ import subprocess
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-print("这是自动配置相机标定的脚本")
 # 定义要下载的文件的 URL 和保存路径
 url_prefix = "https://raw.githubusercontent.com/geekincode/camera-calibration/refs/heads/main/"
 pdf_path= "doc/calib.io_checker_200x150_8x11_15.pdf"
@@ -18,6 +17,7 @@ os.system(download_tools_command)
 
 from tools.base import *
 
+PrintUtils.print_delay("这是自动配置相机标定的脚本", 0.05)
 PrintUtils.print_delay("开始下载棋盘格标定板文件...", 0.05)
 
 # 构造 wget 命令

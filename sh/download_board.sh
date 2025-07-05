@@ -2,6 +2,7 @@
 source /etc/profile
 echo "ROS系统版本: "${ROS_DISTRO}
 
+echo "开始下载脚本文件..."
 if [ ! -d "src" ]; then
   mkdir src
 fi
