@@ -13,8 +13,8 @@ pdf_path= "doc/calib.io_checker_200x150_8x11_15.pdf"
 base_url = os.path.join(url_prefix, 'tools/base.py')
 output_path = "./download/calib.io_checker_200x150_8x11_15.pdf"
 
-download_tools_command = "wget {} -O {} --no-check-certificate".format(base_url,base_url.replace(url_prefix,''))
-os.system(download_tools_command+"> /dev/null")
+download_tools_command = "wget -q {} -O {} --no-check-certificate".format(base_url,base_url.replace(url_prefix,''))
+os.system(download_tools_command)
 
 from tools.base import *
 
