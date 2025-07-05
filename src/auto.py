@@ -13,14 +13,11 @@ PrintUtils.print_delay("这是自动配置相机标定的脚本")
 url_prefix = "https://raw.githubusercontent.com/geekincode/camera-calibration/refs/heads/main/"
 pdf_path= "doc/calib.io_checker_200x150_8x11_15.pdf"
 base_url = os.path.join(url_prefix, 'tools/base.py')
-src_url = os.path.join(url_prefix, 'src/auto.py')
 output_path = "./download/calib.io_checker_200x150_8x11_15.pdf"
 
 PrintUtils.print_delay("开始下载脚本文件...", 0.05)
 download_tools_command = "wget {} -O {} --no-check-certificate".format(base_url,base_url.replace(url_prefix,''))
 CmdTask(download_tools_command).run()
-download_src_command = "wget {} -O {} --no-check-certificate".format(src_url,src_url.replace(url_prefix,''))
-CmdTask(download_src_command).run()
 
 
 PrintUtils.print_delay("开始下载棋盘格标定板文件...", 0.05)
