@@ -38,5 +38,5 @@ skew：标定板在视野中的倾斜位置。
 ## 自动标定
 ### 1. 获取标定板图片
 ```
-wget https://raw.githubusercontent.com/geekincode/camera-calibration/refs/heads/main/sh/download_board.sh
+wget https://raw.githubusercontent.com/geekincode/camera-calibration/refs/heads/main/sh/download_board.sh && bash download_board.sh
 ```
