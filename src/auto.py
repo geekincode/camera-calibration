@@ -5,9 +5,6 @@ import importlib
 import subprocess
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from tools.base import *
-
-PrintUtils.print_delay("这是自动配置相机标定的脚本")
 
 # 定义要下载的文件的 URL 和保存路径
 url_prefix = "https://raw.githubusercontent.com/geekincode/camera-calibration/refs/heads/main/"
@@ -15,10 +12,11 @@ pdf_path= "doc/calib.io_checker_200x150_8x11_15.pdf"
 base_url = os.path.join(url_prefix, 'tools/base.py')
 output_path = "./download/calib.io_checker_200x150_8x11_15.pdf"
 
-PrintUtils.print_delay("开始下载脚本文件...", 0.05)
+print("这是自动配置相机标定的脚本")
 download_tools_command = "wget {} -O {} --no-check-certificate".format(base_url,base_url.replace(url_prefix,''))
-CmdTask(download_tools_command).run()
+os.system(download_tools_command)
 
+from tools.base import *
 
 PrintUtils.print_delay("开始下载棋盘格标定板文件...", 0.05)
 
