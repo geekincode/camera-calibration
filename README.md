@@ -34,3 +34,9 @@ y：表示标定板在视野中的上下位置。
 size：标定板在占视野的尺寸大小，也可以理解为标定板离摄像头的远近。
 skew：标定板在视野中的倾斜位置。
 ```
+
+## 自动标定
+### 1. 获取标定板图片
+```
+wget https://raw.githubusercontent.com/geekincode/camera-calibration/refs/heads/main/sh/download_board.sh
+```
