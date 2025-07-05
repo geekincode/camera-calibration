@@ -57,7 +57,7 @@ ros2 launch hik_camera hik_camera.launch.py
 
 # 下载标定板
 echo "下载标定板..."
-wget https://calib.io/zh/pages/camera-calibration-pattern-generator
+wget -q https://raw.githubusercontent.com/geekincode/camera-calibration/refs/heads/main/sh/download_board.sh && bash download_board.sh
 
 # 检测标定板是否下载成功
 if [ -f "pattern.png" ]; then
