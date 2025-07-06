@@ -97,12 +97,7 @@ os.system("colcon build")
 subprocess.run(f"gnome-terminal -- /bin/bash -c 'cd {current_dir} && source install/setup.bash && ros2 launch hik_camera hik_camera.launch.py ; exec bash'", shell=True, executable="/bin/bash")
 
 PrintUtils.print_delay("开始进行相机标定...")
-# try:
-#     CmdTask(download_camera_calibration_command).run()
-#     PrintUtils.print_delay("下载成功！")
-# except subprocess.CalledProcessError as e:
-#     PrintUtils.print_delay("下载失败！")
-#     print("错误信息：", e.stderr)
+PrintUtils.print_delay("下载标定工具camera-calibration...")
+CmdTask("sudo apt install ros-${ROS_DISTRO}-camera-calibration").run()
 subprocess.run("gnome-terminal -- /bin/bash -c 'ros2 run camera_calibration cameracalibrator --size 7x10 --square 0.015 --ros-args -r image:=/image_raw ; exec bash'", shell=True, executable="/bin/bash")
 
-PrintUtils.print_delay("请按Ctrl+C退出")
