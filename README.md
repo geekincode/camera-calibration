@@ -36,7 +36,7 @@ skew：标定板在视野中的倾斜位置。
 ```
 
 ## 自动标定
-先决条件：已有自瞄环境MVS和SDK，git等, 安装camera-calibration
+先决条件：已有自瞄环境MVS和SDK，git等
 ### 1. 获取标定板图片
 ```
 wget -q https://raw.githubusercontent.com/geekincode/camera-calibration/refs/heads/main/sh/download_board.sh && bash download_board.sh
