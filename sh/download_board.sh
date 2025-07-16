@@ -1,14 +1,6 @@
 #!/bin/bash
 source /etc/profile
 
-SUDO=''
-if [ $UID -ne 0 ];then
-    SUDO='sudo'
-fi
-echo "当前用户为：$USER"
-while IFS= read -r -n1 char; do
-    echo -n "$char"
-    sleep 0.1
 # done <<< "当前用户为：$USER"
 echo "ROS系统版本: "${ROS_DISTRO}
 
